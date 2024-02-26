@@ -6,7 +6,6 @@ function generateHash(password){
 
 console.log(generateHash('Mariano'));
 
-
 class User{
     constructor(name, password){
         this.name = name;
@@ -16,7 +15,7 @@ class User{
     
     authenticate(name, password){
         if(name === this.name && this.password === generateHash(password)){
-            console.log('Usuário cadastrado com sucesso');
+            console.log('Usuário autenticado com sucesso');
             return true;
         }
         console.log('Usuário ou senha incorretos');
@@ -28,5 +27,8 @@ const testUser = new User('Mariano', 'Mariano12345');
 
 console.log(testUser)
 
+//fail case
 testUser.authenticate('Mariano', 'SenhaIncorreta');
+
+//success case
 testUser.authenticate('Mariano', 'Mariano12345');
