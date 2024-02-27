@@ -30,5 +30,8 @@ console.log(testUser)
 //fail case
 testUser.authenticate('Mariano', 'SenhaIncorreta');
 
+//fail capitalize error
+testUser.authenticate('Mariano', 'mariano12345');
+
 //success case
 testUser.authenticate('Mariano', 'Mariano12345');
